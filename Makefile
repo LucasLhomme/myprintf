@@ -7,14 +7,17 @@
 
 pathdir=lib/my
 
+NAME = libmy.a
+SRC = my_printf.c
+
 all:
-	make -C $(pathdir)
+	make -C $(pathdir) $(SRC)
 
 clean:
-	make -C $(pathdir) clean
+	make -C $(pathdir) $(SRC) clean
 
 fclean:
-	make -C $(pathdir) fclean
+	make -C $(pathdir) $(SRC) fclean
 
 re:
-	make -C $(pathdir) re
+	make -C $(pathdir) $(SRC) re
