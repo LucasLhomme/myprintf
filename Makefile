@@ -12,3 +12,9 @@ all:
 
 clean:
 	make -C $(pathdir) clean
+
+fclean:
+	make -C $(pathdir) fclean
+
+re:
+	make -C $(pathdir) re
