@@ -8,20 +8,20 @@
 #include <stdarg.h>
 #include "include/my.h"
 
-void cheker(char flag, va_list ap)
+void cheker(char flag, va_list list)
 {
     switch (flag) {
     case 's':
-        my_putstr(va_arg(ap, char *));
+        my_putstr(va_arg(list, char *));
         break;
     case 'd':
-        my_put_nbr(va_arg(ap, int));
+        my_put_nbr(va_arg(list, int));
         break;
     case 'i':
-        my_put_nbr(va_arg(ap, int));
+        my_put_nbr(va_arg(list, int));
         break;
     case 'c':
-        my_putchar((char) va_arg(ap, int));
+        my_putchar((char) va_arg(list, int));
         break;
     default:
         my_putchar('%');
@@ -32,18 +32,18 @@ void cheker(char flag, va_list ap)
 int mini_printf(const char *format, ...)
 {
     int i = 0;
-    va_list ap;
+    va_list list;
 
-    va_start(ap, format);
+    va_start(list, format);
     while (format[i]) {
         if (format[i] == '%') {
             i++;
-            cheker(format[i], ap);
+            cheker(format[i], list);
         } else {
             my_putchar(format[i]);
         }
         i++;
     }
-    va_end(ap);
+    va_end(list);
     return 0;
 }
