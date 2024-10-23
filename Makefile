@@ -12,4 +12,3 @@ all:
 
 clean:
 	make -C $(pathdir) clean
-
