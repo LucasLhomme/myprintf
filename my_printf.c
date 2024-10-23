@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 #include <stdarg.h>
-#include "my.h"
+#include "include/my.h"
 
 void cheker(char flag, va_list ap)
 {
