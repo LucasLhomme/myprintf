@@ -11,13 +11,17 @@ NAME = libmy.a
 SRC = my_printf.c
 
 all:
-	make -C $(pathdir) $(SRC)
+	make $(SRC)
+	make -C $(pathdir) 
 
 clean:
-	make -C $(pathdir) $(SRC) clean
+	make $(SRC)
+	make -C $(pathdir) clean
 
 fclean:
-	make -C $(pathdir) $(SRC) fclean
+	make $(SRC)
+	make -C $(pathdir) fclean
 
 re:
-	make -C $(pathdir) $(SRC) re
+	make $(SRC)
+	make -C $(pathdir) re
