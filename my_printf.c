@@ -1,49 +1,39 @@
 /*
 ** EPITECH PROJECT, 2024
-** Mini printF
+** my_printf
 ** File description:
-** Premier projet Epitech
+** effectue tout ce que la fonction printf peut faire
 */
 #include <stdio.h>
 #include <stdarg.h>
 #include "include/my.h"
 
-void cheker(char flag, va_list ap)
-{
-    switch (flag) {
-    case 's':
-        my_putstr(va_arg(ap, char *));
-        break;
-    case 'd':
-        my_put_nbr(va_arg(ap, int));
-        break;
-    case 'i':
-        my_put_nbr(va_arg(ap, int));
-        break;
-    case 'c':
-        my_putchar((char) va_arg(ap, int));
-        break;
-    default:
-        my_putchar('%');
-        break;
-    }
-}
-
-int mini_printf(const char *format, ...)
+int my_printf(const char *format, ...)
 {
     int i = 0;
-    va_list ap;
+    va_list list;
 
-    va_start(ap, format);
-    while (format[i]) {
-        if (format[i] == '%') {
+    va_start(list, format);
+    for(;format[i] != '\0'; i++)
+	if (format[i] == '%') {
             i++;
-            cheker(format[i], ap);
-        } else {
+            flag_detector(
+        } else
             my_putchar(format[i]);
-        }
         i++;
     }
-    va_end(ap);
+    va_end(list);
     return 0;
+}
+
+void flag_detector(const char *format, int i, va_list list);
+{
+    int valeur = 0;
+    
+    if (format[i] == ' ')
+	flag_detector(i+1);
+    else{
+	valeur = format[i];
+        flag_finder(valeur)
+    }
 }
