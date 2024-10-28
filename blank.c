@@ -4,9 +4,7 @@
 ** File description:
 ** blank.c
 */
-
 #include <stdio.h>
-
 
 void blank(char *blank)
 {
