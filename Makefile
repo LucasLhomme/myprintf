@@ -8,20 +8,24 @@
 pathdir=lib/my
 
 NAME = libmy.a
-SRC = my_printf.c
+
+SRC = my_printf.c\
+	conversion_dec_to_octal.c\
+
+OBJ  	=	 $(SRC:.c=.o)
 
 all:
-	make $(SRC)
+	gcc -o test $(SRC) -I./include -L./lib -lmy 
 	make -C $(pathdir) 
 
 clean:
-	make $(SRC)
+	rm -f $(OBJ)
 	make -C $(pathdir) clean
 
 fclean:
-	make $(SRC)
+	rm -f $(NAME)
 	make -C $(pathdir) fclean
 
 re:
-	make $(SRC)
+	fclean all
 	make -C $(pathdir) re
