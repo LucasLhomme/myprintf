@@ -11,12 +11,13 @@ NAME = libmy.a
 
 SRC = my_printf.c\
 	conversion_dec_to_octal.c\
+	main.c\
 
 OBJ  	=	 $(SRC:.c=.o)
 
 all:
-	gcc -o test $(SRC) -I./include -L./lib -lmy 
-	make -C $(pathdir) 
+	gcc -o test $(SRC) -I./include -L./lib -lmy
+	make -C $(pathdir)
 
 clean:
 	rm -f $(OBJ)
