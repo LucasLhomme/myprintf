@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2024
-** js^
+** find prime sup
 ** File description:
 ** jsp
 */
 
-int my_str_isupper(char const *str)
+int my_find_prime_sup(int nb)
 {
     return (0);
 }

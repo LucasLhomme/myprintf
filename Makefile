@@ -11,13 +11,17 @@ NAME = libmy.a
 
 SRC = my_printf.c\
 	conversion_dec_to_octal.c\
+	mini_printf.c\
 	main.c\
 
 OBJ  	=	 $(SRC:.c=.o)
 
-all:
-	gcc -o test $(SRC) -I./include -L./lib -lmy
-	make -C $(pathdir)
+all: 	$(NAME) clean
+$(NAME):	$(OBJ)
+	ar rcs $(NAME) $(OBJ)
+	cp my.h ../../include
+	cp libmy.a ../
+
 
 clean:
 	rm -f $(OBJ)
