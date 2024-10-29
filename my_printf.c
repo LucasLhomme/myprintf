@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "include/my.h"
-#include "flag.h"
+#include "flags.h"
 
 const flag_t flags[] = {
     {'#', NULL}
