@@ -1,49 +1,75 @@
 /*
 ** EPITECH PROJECT, 2024
-** Mini printF
+** my_printf
 ** File description:
-** Premier projet Epitech
+** effectue tout ce que la fonction printf peut faire
 */
 #include <stdio.h>
 #include <stdarg.h>
 #include "include/my.h"
-
-void cheker(char flag, va_list list)
-{
-    switch (flag) {
-    case 's':
-        my_putstr(va_arg(list, char *));
-        break;
-    case 'd':
-        my_put_nbr(va_arg(list, int));
-        break;
-    case 'i':
-        my_put_nbr(va_arg(list, int));
-        break;
-    case 'c':
-        my_putchar((char) va_arg(list, int));
-        break;
-    default:
-        my_putchar('%');
-        break;
-    }
+#include "flag.h"
+ 
+const flag_t flags[] = {
+    {'c', flag_c}
+    {'#', flag_#}
+    {'0',flag_0}
+    {'-',flag_-}
+    {'+',flag_+}
+    {'h',flag_h}
+    {'l',flag_l}
+    {'q',flag_q}
+    {'L',flag_L}
+    {'j',flag_j}
+    {'z',flag_z}
+    {'Z',flag_Z}
+    {'t',flag_t}
+    {'d',flag_d}
+    {'i',flag_i}
+    {'o',flag_o}
+    {'u',flag_u}
+    {'x',flag_x}
+    {'X',flag_X}
+    {'e',flag_e}
+    {'E',flag_E}
+    {'f',flag_f}
+    {'F',flag_F}
+    {'g',flag_G}
+    {'a',flag_A}
+    {'c',flag_c}
+    {'s',flag_s}
+    {'C',flag_C}
+    {'S',flag_S}
+    {'p',flag_p}
+    {'n',flag_n}
+    {'m',flag_m}
+    {'%',flag_%}
+    {'\0',NULL}
 }
 
-int mini_printf(const char *format, ...)
+int my_printf(const char *format, ...)
 {
     int i = 0;
     va_list list;
 
     va_start(list, format);
-    while (format[i]) {
-        if (format[i] == '%') {
+    for(;format[i] != '\0'; i++)
+	if (format[i] == '%') {
             i++;
-            cheker(format[i], list);
-        } else {
+            flag_detector(format, i, list);;
+        } else
             my_putchar(format[i]);
-        }
         i++;
-    }
     va_end(list);
     return 0;
+}
+int flag_detector(const char *format, int i, va_list list);
+{   
+    if (format[i] == ' ')
+	my_putchar(' ')
+	flag_detector(i+1);
+    for(int c;flags[c].flag != '\0';c++) {
+	if (flags[c].flag == format[i])
+	    flags[c].flag_identifier(arg_list)
+    }
+    return i;
 }
