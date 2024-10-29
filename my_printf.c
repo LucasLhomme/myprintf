@@ -8,42 +8,41 @@
 #include <stdarg.h>
 #include "include/my.h"
 #include "flag.h"
- 
+
 const flag_t flags[] = {
+    {'#', NULL}
+    {'0', NULL}
+    {'-', NULL}
+    {'+', NULL}
+    {'h', NULL}
+    {'l', NULL}
+    {'q', NULL}
+    {'L', NULL}
+    {'j', NULL}
+    {'z', NULL}
+    {'Z', NULL}
+    {'t', NULL}
+    {'d', flag_d}
+    {'i', flag_i}
+    {'o', flag_o}
+    {'u', NULL}
+    {'x', NULL}
+    {'X', NULL}
+    {'e', NULL}
+    {'E', NULL}
+    {'f', NULL}
+    {'F', NULL}
+    {'g', NULL}
+    {'a', NULL}
     {'c', flag_c}
-    {'#', flag_#}
-    {'0',flag_0}
-    {'-',flag_-}
-    {'+',flag_+}
-    {'h',flag_h}
-    {'l',flag_l}
-    {'q',flag_q}
-    {'L',flag_L}
-    {'j',flag_j}
-    {'z',flag_z}
-    {'Z',flag_Z}
-    {'t',flag_t}
-    {'d',flag_d}
-    {'i',flag_i}
-    {'o',flag_o}
-    {'u',flag_u}
-    {'x',flag_x}
-    {'X',flag_X}
-    {'e',flag_e}
-    {'E',flag_E}
-    {'f',flag_f}
-    {'F',flag_F}
-    {'g',flag_G}
-    {'a',flag_A}
-    {'c',flag_c}
-    {'s',flag_s}
-    {'C',flag_C}
-    {'S',flag_S}
-    {'p',flag_p}
-    {'n',flag_n}
-    {'m',flag_m}
-    {'%',flag_%}
-    {'\0',NULL}
+    {'s', flag_s}
+    {'C', NULL}
+    {'S', NULL}
+    {'p', NULL}
+    {'n', NULL}
+    {'m', NULL}
+    {'%', flag_percent}
+    {'\0', NULL}
 }
 
 int my_printf(const char *format, ...)
@@ -52,10 +51,10 @@ int my_printf(const char *format, ...)
     va_list list;
 
     va_start(list, format);
-    for(;format[i] != '\0'; i++)
-	if (format[i] == '%') {
+    for (; format[i] != '\0'; i++)
+        if (format[i] == '%') {
             i++;
-            flag_detector(format, i, list);;
+            flag_detector(format, i, list);
         } else
             my_putchar(format[i]);
         i++;
@@ -64,12 +63,13 @@ int my_printf(const char *format, ...)
 }
 int flag_detector(const char *format, int i, va_list list);
 {   
-    if (format[i] == ' ')
-	my_putchar(' ')
-	flag_detector(i+1);
-    for(int c;flags[c].flag != '\0';c++) {
-	if (flags[c].flag == format[i])
-	    flags[c].flag_identifier(arg_list)
+    if (format[i] == ' ') {
+        my_putchar(' ')
+        flag_detector(i + 1);
+    }
+    for(int c; flags[c].flag != '\0'; c++) {
+        if (flags[c].flag == format[i])
+            flags[c].flag_identifier(arg_list)
     }
     return i;
 }
