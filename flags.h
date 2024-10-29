@@ -12,11 +12,12 @@
 ** stuct
 */
 
-#indef STRUCT_H_
+
+#ifndef STRUCT_H_
     #define STRUCT_H_
 
 struct flag_s{
     char identifier;
     void (*flag_identifier)(va_list list);
-}flag_t
+}flag_t;
 #endif

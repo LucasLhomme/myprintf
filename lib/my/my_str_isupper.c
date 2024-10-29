@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** js^
+** jsp
 ** File description:
 ** jsp
 */

@@ -9,7 +9,8 @@
 #include "include/my.h"
 #include "flags.h"
 
-const flag_t flags[] = {
+const flag_t flags[]
+{
     {'#', NULL}
     {'0', NULL}
     {'-', NULL}
@@ -61,15 +62,17 @@ int my_printf(const char *format, ...)
     va_end(list);
     return 0;
 }
-int flag_detector(const char *format, int i, va_list list);
+
+int flag_detector(const char *format, int i, va_list list)
 {   
     if (format[i] == ' ') {
-        my_putchar(' ')
-        flag_detector(i + 1);
+        my_putchar(' ');
+        flag_detector = (i + 1);
     }
+
     for(int c; flags[c].flag != '\0'; c++) {
         if (flags[c].flag == format[i])
-            flags[c].flag_identifier(arg_list)
+            flags[c].flag_identifier(arg_list); 
     }
     return i;
 }
