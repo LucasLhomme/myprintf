@@ -16,9 +16,12 @@ SRC = my_printf.c\
 
 OBJ  	=	 $(SRC:.c=.o)
 
-all:
-	gcc -o test $(SRC) -I./include -L./lib -lmy
-	make -C $(pathdir)
+all: 	$(NAME) clean
+$(NAME):	$(OBJ)
+	ar rcs $(NAME) $(OBJ)
+	cp my.h ../../include
+	cp libmy.a ../
+
 
 clean:
 	rm -f $(OBJ)
