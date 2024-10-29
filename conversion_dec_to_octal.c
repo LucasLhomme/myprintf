@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "./include/my.h"
 
-int dectooctal(int n)
+int flag_o(int n)
 {
     int i = n;
     int result = 0;
