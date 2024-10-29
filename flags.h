@@ -19,3 +19,4 @@ struct flag_s{
     char identifier;
     void (*flag_identifier)(va_list list);
 }flag_t
+#endif
