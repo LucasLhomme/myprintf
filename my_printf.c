@@ -23,8 +23,8 @@ const flag_t flags[]
     {'z', NULL}
     {'Z', NULL}
     {'t', NULL}
-    {'d', flag_d}
-    {'i', flag_i}
+    {'d', checker}
+    {'i', checker}
     {'o', flag_o}
     {'u', NULL}
     {'x', NULL}
@@ -35,8 +35,8 @@ const flag_t flags[]
     {'F', NULL}
     {'g', NULL}
     {'a', NULL}
-    {'c', flag_c}
-    {'s', flag_s}
+    {'c', checker}
+    {'s', checker}
     {'C', NULL}
     {'S', NULL}
     {'p', NULL}

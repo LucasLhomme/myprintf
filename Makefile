@@ -11,6 +11,7 @@ NAME = libmy.a
 
 SRC = my_printf.c\
 	conversion_dec_to_octal.c\
+	mini_printf.c\
 	main.c\
 
 OBJ  	=	 $(SRC:.c=.o)
