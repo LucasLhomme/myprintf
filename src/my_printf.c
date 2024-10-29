@@ -6,8 +6,8 @@
 */
 #include <stdio.h>
 #include <stdarg.h>
-#include "include/my.h"
-#include "flags.h"
+#include "../include/my.h"
+#include "../include/flags.h"
 
 const flag_t flags[] = {
     {'#', NULL},

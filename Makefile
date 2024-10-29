@@ -5,14 +5,14 @@
 ## MakeFile dans le fichier root
 ##
 
-pathdir=src/lib
+pathdir=./src/lib
 
 NAME = libmy.a
 
-SRC = my_printf.c\
-	conversion_dec_to_octal.c\
-	mini_printf.c\
-	main.c\
+SRC = src/my_printf.c\
+	src/conversion_dec_to_octal.c\
+	src/mini_printf.c\
+	src/main.c\
 
 LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_compute_power_root.c\
@@ -29,7 +29,7 @@ LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_str_isalpha.c\
 	$(pathdir)/my_str_islower.c\
 	$(pathdir)/my_str_isnum.c\
-	$(pathdir)/my_str_isprintable.c
+	$(pathdir)/my_str_isprintable.c\
 	$(pathdir)/my_str_isupper.c\
 	$(pathdir)/my_strcapitalize.c\
 	$(pathdir)/my_strcat.c\
@@ -42,24 +42,22 @@ LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_strstr.c\
 	$(pathdir)/my_strupcase.c\
 	$(pathdir)/my_swap.c
-	
-OBJ  	=	 $(SRC:.c=.o)
+
+OBJ  	=	 $(SRC:.c=.o) $(LIB:.c=.o)
 
 all: 	$(NAME) clean
+
 $(NAME):	$(OBJ)
-	ar rcs $(NAME) $(OBJ)
-	cp my.h ../../include
-	cp libmy.a ../
+		ar rcs $(NAME) $(OBJ)
+		cp my.h ../../include
+		cp libmy.a ../
 
 
 clean:
 	rm -f $(OBJ)
-	make -C $(pathdir) clean
 
 fclean:
 	rm -f $(NAME)
-	make -C $(pathdir) fclean
 
 re:
 	fclean all
-	make -C $(pathdir) re
