@@ -11,5 +11,5 @@
 
 int flag_d(va_list list)
 {
-    my_put_nbr(list);
+    my_put_nbr(va_arg(list,int));
 }
