@@ -12,6 +12,7 @@ NAME = libmy.a
 SRC = src/my_printf.c\
 	src/flag_o.c\
 	src/flag_d.c\
+	src/flag_c.c\
 	src/flag_s.c\
 	src/flag_i.c\
 	src/flag_percent.c\
