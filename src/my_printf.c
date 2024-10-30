@@ -11,6 +11,16 @@
 #include "../include/flags.h"
 #include <unistd.h>
 
+const flag_t flags[] = {
+    {'d', checker},
+    {'i', checker},
+    {'o', flag_o},
+    {'c', checker},
+    {'s', checker},
+    {'%', checker},
+    {'\0', NULL},
+};
+
 int my_printf(const char *format, ...)
 {
     int i = 0;
