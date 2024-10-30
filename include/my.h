@@ -42,9 +42,10 @@ char *my_strncat(char *dest, char const *src, int nb);
 void my_putchar(char c);
 int my_printf(const char *format, ...);
 void cheker(char flag, va_list list);
-int flag_o(int n);
+int flag_d(va_list list);
+int flag_o(va_list list);
+int flag_s(va_list list);
 void blank(char *blank);
-void cheker(char flag, va_list list);
 int flag_detector(const char *format, int i, va_list list);
 
 #endif /*my.h*/

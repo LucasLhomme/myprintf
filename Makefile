@@ -10,9 +10,11 @@ pathdir=./src/lib
 NAME = libmy.a
 
 SRC = src/my_printf.c\
-	src/conversion_dec_to_octal.c\
-	src/mini_printf.c\
+	src/flag_o.c\
+	src/flag_d.c\
+	src/flag_s\
 	src/flag_plus.c\
+
 
 LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_find_prime_sup.c\
