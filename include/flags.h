@@ -16,7 +16,7 @@
 #ifndef STRUCT_H_
     #define STRUCT_H_
 
-void checker(char flag, va_list ap);
+void flag_(char flag, va_list ap);
 int flag_o(int n);
 
 typedef struct flag_s {
@@ -25,38 +25,11 @@ typedef struct flag_s {
 } flag_t;
 
 const flag_t flags[] = {
-    {'#', NULL},
-    {'0', NULL},
-    {'-', NULL},
-    {'+', NULL},
-    {'h', NULL},
-    {'l', NULL},
-    {'q', NULL},
-    {'L', NULL},
-    {'j', NULL},
-    {'z', NULL},
-    {'Z', NULL},
-    {'t', NULL},
-    {'d', checker},
-    {'i', checker},
+    {'d', flag_d},
+    {'i', flag_i},
     {'o', flag_o},
-    {'u', NULL},
-    {'x', NULL},
-    {'X', NULL},
-    {'e', NULL},
-    {'E', NULL},
-    {'f', NULL},
-    {'F', NULL},
-    {'g', NULL},
-    {'a', NULL},
-    {'c', checker},
-    {'s', checker},
-    {'C', NULL},
-    {'S', NULL},
-    {'p', NULL},
-    {'n', NULL},
-    {'m', NULL},
-    {'%', checker},
-    {'\0', NULL},
+    {'c', flag_c},
+    {'s', flag_s},
+    {'%', flag_percent}
 };
 #endif
