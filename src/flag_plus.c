@@ -5,7 +5,7 @@
 ** posi_neg.c
 */
 
-#include "my.h"
+#include "../include/my.h"
 
 int flag_plus(int p)
 {
