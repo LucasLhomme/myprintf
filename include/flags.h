@@ -11,7 +11,7 @@
 ** File description:
 ** stuct
 */
-#include "./my.h"
+#include "my.h"
 
 #ifndef STRUCT_H_
     #define STRUCT_H_
