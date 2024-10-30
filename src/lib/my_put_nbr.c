@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2024
 ** my put nbr
 ** File description:
-** jsp
+** affiche un chiffre
 */
 
-#include "my.h"
+#include "../../include/my.h"
 
 int my_put_nbr(int nb)
 {

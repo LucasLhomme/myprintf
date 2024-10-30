@@ -7,9 +7,6 @@
 
 #ifndef MY_H
     #define MY_H
-
-
-void my_putchar(char c);
 int my_isneg(int nb);
 int my_put_nbr(int nb);
 void my_swap(int *a, int *b);
@@ -39,5 +36,7 @@ int my_showstr(char const *str);
 int my_showmem(char const *str, int size);
 char *my_strcat(char *dest, char const *src);
 char *my_strncat(char *dest, char const *src, int nb);
+void my_putchar(char c);
+
 
 #endif /*my.h*/
