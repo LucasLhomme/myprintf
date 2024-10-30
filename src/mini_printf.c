@@ -7,8 +7,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "../include/my.h"
+#include "../include/flags.h"
 
-void cheker(char flag, va_list list)
+
+void checker(char flag, va_list list)
 {
     switch (flag) {
     case 's':

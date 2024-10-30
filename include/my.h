@@ -5,6 +5,9 @@
 ** Header avec les fonctions
 */
 
+#include <stdio.h>
+#include <stdarg.h>
+
 #ifndef MY_H
     #define MY_H
 int my_isneg(int nb);
@@ -37,6 +40,11 @@ int my_showmem(char const *str, int size);
 char *my_strcat(char *dest, char const *src);
 char *my_strncat(char *dest, char const *src, int nb);
 void my_putchar(char c);
-
+int my_printf(const char *format, ...);
+void cheker(char flag, va_list list);
+int flag_o(int n);
+void blank(char *blank);
+void cheker(char flag, va_list list);
+int flag_detector(const char *format, int i, va_list list);
 
 #endif /*my.h*/
