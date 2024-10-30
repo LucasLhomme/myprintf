@@ -7,8 +7,9 @@
 #include "../include/my.h"
 #include <stdio.h>
 
-void blank(char *blank)
+void blank(va_list list)
 {
+    char *blanck = list;
     if (my_strlen(blank) == 0 || my_isnum(blank) == 1)
         my_putchar(' ');
     my_putstr(blank);
