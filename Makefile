@@ -39,24 +39,26 @@ LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_strncpy.c\
 	$(pathdir)/my_strstr.c\
 	$(pathdir)/my_strupcase.c\
-	$(pathdir)/my_swap.c
+	$(pathdir)/my_swap.c\
+
+MAIN = main.c\
 
 OBJ  	=	 $(SRC:.c=.o)
 
 TEST =  $(LIB:.c=.o)
+
+DEBUG = $(MAIN:.c=.o)
 
 all: 	$(NAME) clean
 
 $(NAME):	$(OBJ) $(TEST)
 		ar rcs $(NAME) $(OBJ)  $(TEST)
 
-
-
 clean:
-	rm -f $(OBJ) $(TEST)
+	rm -f $(OBJ) $(TEST) $(DEBUG)
 
 fclean:
-	rm -f $(NAME) $(TEST)
+	rm -f $(NAME) $(TEST) $(DEBUG)
 
 re:
 	fclean all
