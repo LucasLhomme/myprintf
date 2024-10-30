@@ -6,6 +6,7 @@
 ** convertis un chiffre to un octal
 */
 #include <stdio.h>
+#include <stdarg.h>
 #include "../include/my.h"
 
 int flag_o(va_list list)
