@@ -11,7 +11,7 @@
 
 int flag_s(va_list list)
 {
-    char *str = list;
+    char *str = va_arg(list, char *);
 
     my_putstr(str);
     return 0;
