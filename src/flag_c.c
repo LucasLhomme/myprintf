@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2024
+** Flag c
+** File description:
+** flag c
+*/
+
 #include <stdio.h>
 #include <stdarg.h>
 #include "../include/my.h"

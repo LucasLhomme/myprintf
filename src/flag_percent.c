@@ -11,6 +11,6 @@
 
 int flag_percent(va_list list)
 {
-    my_putchar("%");
+    my_putchar('%');
     return 0;
 }

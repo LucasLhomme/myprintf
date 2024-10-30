@@ -46,6 +46,7 @@ int flag_o(va_list list);
 int flag_s(va_list list);
 int flag_i(va_list list);
 int flag_c(va_list list);
+int flag_percent(va_list list);
 void blank(char *blank);
 int flag_detector(const char *format, int i, va_list list);
 
