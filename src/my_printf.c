@@ -12,12 +12,12 @@
 #include <unistd.h>
 
 const flag_t flags[] = {
-    {'d', checker},
-    {'i', checker},
+    {'d', flag_d},
+    {'i', flag_i},
     {'o', flag_o},
-    {'c', checker},
-    {'s', checker},
-    {'%', checker},
+    {'c', flag_c},
+    {'s', flag_s},
+    {'%', flag_percent},
     {'\0', NULL},
 };
 
