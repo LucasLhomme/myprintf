@@ -4,7 +4,7 @@
 ** File description:
 ** blanck.c
 */
-
+#include "../include/my.h"
 #include <stdio.h>
 
 void blank(char *blank)
