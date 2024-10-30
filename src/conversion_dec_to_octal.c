@@ -1,3 +1,4 @@
+
 /*
 ** EPITECH PROJECT, 2024
 ** conversion decimal to octal
@@ -7,9 +8,9 @@
 #include <stdio.h>
 #include "../include/my.h"
 
-int flag_o(int n)
+int flag_o(va_list list)
 {
-    int i = n;
+    int i = list;
     int result = 0;
     int k = 0;
     int power = 1;
