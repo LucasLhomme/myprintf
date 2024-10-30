@@ -23,13 +23,4 @@ typedef struct flag_s {
     char flag;
     void (*flag_identifier)(va_list list);
 } flag_t;
-
-const flag_t flags[] = {
-    {'d', flag_d},
-    {'i', flag_i},
-    {'o', flag_o},
-    {'c', flag_c},
-    {'s', flag_s},
-    {'%', flag_percent}
-};
 #endif
