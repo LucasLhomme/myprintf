@@ -9,6 +9,7 @@
 #include <stdarg.h>
 #include "../include/my.h"
 #include "../include/flags.h"
+#include <unistd.h>
 
 int my_printf(const char *format, ...)
 {
