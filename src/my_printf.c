@@ -33,9 +33,9 @@ int flag_detector(const char *format, int i, va_list list)
         my_putchar(' ');
         flag_detector(format, i + 1, list);
     }
-    for(int c; flags[c].flag != '\0'; c++) {
+    for (int c; flags[c].flag != '\0'; c++) {
         if (flags[c].flag == format[i])
-            flags[c].flag_identifier(list); 
+            flags[c].flag_identifier(list);
     }
     return i;
 }
