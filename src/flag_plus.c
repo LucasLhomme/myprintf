@@ -11,6 +11,7 @@
 int flag_plus(va_list list)
 {
     int p = list;
+
     if (p < 0)
         my_putchar('-');
     else
