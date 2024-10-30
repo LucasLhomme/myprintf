@@ -12,16 +12,14 @@ NAME = libmy.a
 SRC = src/my_printf.c\
 	src/conversion_dec_to_octal.c\
 	src/mini_printf.c\
-	src/main.c\
 
 LIB = $(pathdir)/my_compute_power_rec.c\
-	$(pathdir)/my_compute_power_root.c\
-	$(pathdir)/my_find_prime.c\
+	$(pathdir)/my_find_prime_sup.c\
 	$(pathdir)/my_getnbr.c\
 	$(pathdir)/my_is_prime.c\
 	$(pathdir)/my_isneg.c\
-	$(pathdir)/my_put_nbr\
-	$(pathdir)/my_putchar\
+	$(pathdir)/my_put_nbr.c\
+	$(pathdir)/my_putchar.c\
 	$(pathdir)/my_putstr.c\
 	$(pathdir)/my_revstr.c\
 	$(pathdir)/my_showmem.c\
@@ -36,28 +34,28 @@ LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_strcmp.c\
 	$(pathdir)/my_strcpy.c\
 	$(pathdir)/my_strlen.c\
-	$(pathdir)/my_strlowercase.c\
 	$(pathdir)/my_strncat.c\
 	$(pathdir)/my_strncpy.c\
 	$(pathdir)/my_strstr.c\
 	$(pathdir)/my_strupcase.c\
 	$(pathdir)/my_swap.c
 
-OBJ  	=	 $(SRC:.c=.o) $(LIB:.c=.o)
+OBJ  	=	 $(SRC:.c=.o)
+
+TEST =  $(LIB:.c=.o)
 
 all: 	$(NAME) clean
 
-$(NAME):	$(OBJ)
-		ar rcs $(NAME) $(OBJ)
-		cp my.h ../../include
-		cp libmy.a ../
+$(NAME):	$(OBJ) $(TEST)
+		ar rcs $(NAME) $(OBJ)  $(TEST)
+
 
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(TEST)
 
 fclean:
-	rm -f $(NAME)
+	rm -f $(NAME) $(TEST)
 
 re:
 	fclean all

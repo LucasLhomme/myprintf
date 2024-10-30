@@ -5,7 +5,7 @@
 ** convertis un chiffre to un octal
 */
 #include <stdio.h>
-#include "./include/my.h"
+#include "../include/my.h"
 
 int flag_o(int n)
 {
