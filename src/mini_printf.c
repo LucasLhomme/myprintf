@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2024
-** Mini printF
+** mini printf
 ** File description:
-** Premier projet Epitech
+** mini_printf
 */
 #include <stdio.h>
 #include <stdarg.h>
-#include "include/my.h"
+#include "../include/my.h"
 
 void cheker(char flag, va_list list)
 {
@@ -27,23 +27,4 @@ void cheker(char flag, va_list list)
         my_putchar('%');
         break;
     }
-}
-
-int mini_printf(const char *format, ...)
-{
-    int i = 0;
-    va_list list;
-
-    va_start(list, format);
-    while (format[i]) {
-        if (format[i] == '%') {
-            i++;
-            cheker(format[i], list);
-        } else {
-            my_putchar(format[i]);
-        }
-        i++;
-    }
-    va_end(list);
-    return 0;
 }
