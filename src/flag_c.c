@@ -4,12 +4,12 @@
 ** File description:
 ** flag c
 */
-
 #include <stdio.h>
 #include <stdarg.h>
 #include "../include/my.h"
 
 int flag_c(va_list list)
 {
-    my_putchar(list);
+    my_putchar(va_arg(list, char));
+    return 0;
 }

@@ -12,7 +12,10 @@ NAME = libmy.a
 SRC = src/my_printf.c\
 	src/flag_o.c\
 	src/flag_d.c\
-	src/flag_s\
+	src/flag_c.c\
+	src/flag_s.c\
+	src/flag_i.c\
+	src/flag_percent.c\
 	src/flag_plus.c\
 
 
@@ -43,24 +46,21 @@ LIB = $(pathdir)/my_compute_power_rec.c\
 	$(pathdir)/my_strupcase.c\
 	$(pathdir)/my_swap.c\
 
-MAIN = main.c\
-
 OBJ  	=	 $(SRC:.c=.o)
 
 TEST =  $(LIB:.c=.o)
 
-DEBUG = $(MAIN:.c=.o)
-
-all: 	$(NAME) clean
+all: 	$(NAME)
 
 $(NAME):	$(OBJ) $(TEST)
 		ar rcs $(NAME) $(OBJ)  $(TEST)
 
 clean:
-	rm -f $(OBJ) $(TEST) $(DEBUG)
+		rm -f $(OBJ) $(TEST)
 
 fclean:
-	rm -f $(NAME) $(TEST) $(DEBUG)
+		rm -f $(NAME) $(TEST) $(OBJ)
 
 re:
-	fclean all
+		$(MAKE) fclean
+		$(MAKE) all
