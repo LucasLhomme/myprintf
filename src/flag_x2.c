@@ -2,24 +2,23 @@
 ** EPITECH PROJECT, 2024
 ** flag_X
 ** File description:
-** flag_X
+** display hexadecimal
 */
-
 #include <unistd.h>
 #include <stdarg.h>
 #include "../include/my.h"
 
-int flag_X(int pointer)
+int flag_x2(va_list list)
 {
-    char *base = "0123456789abcdef";
-    int i = pointer;
+    char *base_letter = "0123456789abcdef";
+    int i = (va_arg(list, int));
     int r = 0;
     int t = 0;
 
     while (i != 0) {
-      r = i % 16;
-      my_putchar(base[r]);
-      i = i /16;
-      }
+    r = i % 16;
+    my_putchar(base_letter[r]);
+    i = i / 16;
+    }
     return 0;
 }
