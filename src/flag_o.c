@@ -10,7 +10,7 @@
 
 int flag_o(va_list list)
 {
-    int i = va_arg(list,int);
+    int i = (va_arg(list, int));
     int result = 0;
     int k = 0;
     int power = 1;
