@@ -47,6 +47,6 @@ int flag_detector(const char *format, int i, va_list list)
     for (int c = 0; flags[c].flag != '\0'; c++) {
         if (flags[c].flag == format[i])
             flags[c].flag_identifier(list);
-    } 
+    }
     return i;
 }
