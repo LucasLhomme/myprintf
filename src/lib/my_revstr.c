@@ -4,15 +4,27 @@
 ** File description:
 ** reverse le str
 */
+
+#include <stddef.h>
+
 char *my_revstr(char *str)
 {
-    int lenght = *my_revstr(str);
-    char temp;
-    
-    for (int i = 0; i < lenght / 2; i++) {
-        temp = str[i];
-        str[i] = str[lenght - i - 1];
-        str[lenght - i - 1] = temp;
+    if (str == NULL) {
+        return NULL; // Return NULL if the input string is NULL
     }
-    return &(str[0]);
+
+    int len = 0;
+    char t;
+
+    // Calculate the length of the string
+    while (str[len] != '\0') {
+        len++;
+    }
+
+    for (int i = 0; i < len / 2; i++) {
+        t = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = t;
+    }
+    return str;
 }

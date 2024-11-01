@@ -21,8 +21,8 @@ int flag_x2(va_list list)
         str[p] = base[r];
         i = i / 16;
     }
+    str[p] = '\0'; // Null-terminate the string before reversing
     my_revstr(str);
-    str[p] = '\0';
     my_putstr(str);
     return 0;
 }

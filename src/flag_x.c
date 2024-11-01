@@ -14,15 +14,16 @@ int flag_x(va_list list)
     int i = (va_arg(list, int));
     int r = 0;
     int p = 0;
-    char str[32];
+    char str[16];
 
     for (; i != 0; p++) {
         r = i % 16;
-        str[p] = base[r];
+        str[p] = base[r + '\0'];
         i = i / 16;
     }
-    my_revstr(str);
     str[p] = '\0';
+
+    my_revstr(str);
     my_putstr(str);
     return 0;
 }
