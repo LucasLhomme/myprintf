@@ -13,14 +13,16 @@ int flag_x(va_list list)
     char *base = "0123456789abcdef";
     int i = (va_arg(list, int));
     int r = 0;
-    int t = 0;
-    char str[16];
+    int p = 0;
+    char str[32];
 
-    for (int p = 0; i != 0; p++) {
+    for (; i != 0; p++) {
         r = i % 16;
         str[p] = base[r];
         i = i / 16;
     }
     my_revstr(str);
+    str[p + 1] = '\0';
+    my_putstr(str);
     return 0;
 }
