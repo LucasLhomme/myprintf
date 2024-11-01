@@ -10,6 +10,6 @@
 
 int flag_c(va_list list)
 {
-    my_putchar(va_arg(list, char));
+    my_putchar(va_arg(list, int));
     return 0;
 }
