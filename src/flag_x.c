@@ -10,7 +10,7 @@
 
 int flag_x(va_list list)
 {
-    char *base_letter = "0123456789abcdef";
+    char *base = "0123456789abcdef";
     int i = (va_arg(list, int));
     int r = 0;
     int t = 0;
