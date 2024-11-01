@@ -15,7 +15,6 @@ const flag_t flags[] = {
     {'d', flag_d},
     {'i', flag_i},
     {'o', flag_o},
-    {'o', flag_o},
     {'x', flag_x},
     {'X', flag_x2},
     {'c', flag_c},
