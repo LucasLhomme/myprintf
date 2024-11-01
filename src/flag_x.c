@@ -23,5 +23,6 @@ int flag_x(va_list list)
     }
     my_revstr(str);
     str[p + 1] = '\0';
+    my_putstr(str);
     return 0;
 }
