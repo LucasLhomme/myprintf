@@ -22,7 +22,7 @@ int flag_x(va_list list)
         i = i / 16;
     }
     my_revstr(str);
-    str[p + 1] = '\0';
+    str[p] = '\0';
     my_putstr(str);
     return 0;
 }
