@@ -66,3 +66,6 @@ fclean:
 re:
 		$(MAKE) fclean
 		$(MAKE) all
+debug:
+		$(MAKE) clean
+		gcc main.c -Iinclude libmy.a
