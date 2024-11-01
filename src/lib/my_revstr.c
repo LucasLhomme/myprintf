@@ -10,13 +10,12 @@
 char *my_revstr(char *str)
 {
     if (str == NULL) {
-        return NULL; // Return NULL if the input string is NULL
+        return NULL;
     }
 
     int len = 0;
     char t;
 
-    // Calculate the length of the string
     while (str[len] != '\0') {
         len++;
     }
