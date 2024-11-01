@@ -10,7 +10,7 @@
 
 int flag_o(va_list list)
 {
-    int i = (va_arg(list, int));
+    int i = va_arg(list, int);
     int result = 0;
     int power = 1;
 
@@ -19,5 +19,7 @@ int flag_o(va_list list)
         i = i / 8;
         power *= 10;
     }
+    printf("Debug: Final result = %d\n", result);
     my_put_nbr(result);
+    return 0;
 }
