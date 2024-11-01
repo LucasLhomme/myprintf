@@ -2,9 +2,8 @@
 ** EPITECH PROJECT, 2024
 ** flag_X
 ** File description:
-** flag_X
+** display hexadecimal
 */
-
 #include <unistd.h>
 #include <stdarg.h>
 #include "../include/my.h"
