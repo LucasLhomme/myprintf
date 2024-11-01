@@ -9,12 +9,12 @@
 
 char *my_revstr(char *str)
 {
+    int len = 0;
+    char t;
+    
     if (str == NULL) {
         return NULL;
     }
-
-    int len = 0;
-    char t;
 
     while (str[len] != '\0') {
         len++;
