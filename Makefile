@@ -18,7 +18,6 @@ SRC = src/my_printf.c\
 	src/flag_percent.c\
 	src/flag_x.c\
 	src/flag_x2.c\
-	src/flag_plus.c\
 
 
 LIB = $(pathdir)/my_compute_power_rec.c\
