@@ -19,7 +19,6 @@ int flag_o(va_list list)
         i = i / 8;
         power *= 10;
     }
-    printf("Debug: Final result = %d\n", result);
     my_put_nbr(result);
     return 0;
 }
