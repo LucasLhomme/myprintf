@@ -8,6 +8,10 @@
 #include <stdarg.h>
 #include "../include/my.h"
 
+#include <stdio.h>
+#include <stdarg.h>
+#include "../include/my.h"
+
 int flag_o(va_list list)
 {
     int i = va_arg(list, int);
